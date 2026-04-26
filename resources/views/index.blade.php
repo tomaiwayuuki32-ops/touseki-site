@@ -32,7 +32,7 @@
       <div class="section-heading">
         <span class="section-label">ABOUT</span>
         <h2 class="section-title">透析とは？</h2>
-        <p class="section-desc">透析は、腎臓の働きが大きく低下したときに、体の中の老廃物や余分な水分を取り除くために行う治療です。</p>
+        <p class="section-desc">透析とは、腎臓の働きが大きく低下したときに、体の中の老廃物や余分な水分を取り除くために行う治療です。</p>
       </div>
       <div class="about-grid">
         <div class="about-card">
