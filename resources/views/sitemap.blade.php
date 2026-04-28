@@ -5,7 +5,7 @@
 @endphp
 @include('commons.header')
 
-<main class="sitemap-page-main">
+<main class="page-main">
 
   <!-- ══════════════════════════════
        PAGE HERO
@@ -45,6 +45,11 @@
             <li class="sitemap-item">
               <a href="/hd" class="sitemap-item-link">血液透析</a>
               <p class="sitemap-item-desc">血液透析の治療の流れ、バスキュラーアクセス、通院頻度、日常生活との両立について説明しています。</p>
+            </li>
+
+            <li class="sitemap-item sitemap-item--child">
+              <a href="/hd/shunt" class="sitemap-item-link">シャント感染と予防</a>
+              <p class="sitemap-item-desc">シャント感染の症状・早期発見のポイントと、保湿を中心とした日常的な予防方法について説明しています。</p>
             </li>
 
             <li class="sitemap-item">

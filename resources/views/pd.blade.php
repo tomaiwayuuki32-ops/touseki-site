@@ -5,7 +5,7 @@
 @endphp
 @include('commons.header')
 
-<main class="pd-page-main">
+<main class="page-main">
 
   <!-- ══════════════════════════════
        PAGE HERO

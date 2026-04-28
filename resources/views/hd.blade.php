@@ -5,7 +5,7 @@
 @endphp
 @include('commons.header')
 
-<main class="hd-page-main">
+<main class="page-main">
 
   <!-- ══════════════════════════════
        PAGE HERO
@@ -92,6 +92,13 @@
       </div>
       <div class="hd-stat-note">
         <p>どの方法が選ばれるかは、血管の状態や治療の状況、体の状態などによって異なります。詳しくは主治医と相談しながら決めていきます。</p>
+      </div>
+      <div class="hd-shunt-cta">
+        <div class="hd-shunt-cta-text">
+          <p class="hd-shunt-cta-title">シャントを長く使い続けるために</p>
+          <p class="hd-shunt-cta-desc">赤み・腫れ・熱感・痛みなどの変化は、シャント感染やトラブルのサインになることがあります。</p>
+        </div>
+        <a href="/hd/shunt" class="hd-shunt-cta-btn">シャント感染と予防について詳しく見る</a>
       </div>
     </section>
 
@@ -253,6 +260,11 @@
     <section class="about-page-section about-page-section--last">
       <h2 class="about-page-heading">もっと詳しく知りたい方へ</h2>
       <div class="dialysis-nav-grid">
+        <a href="/hd/shunt" class="dialysis-nav-card">
+          <span class="dialysis-nav-label">SHUNT</span>
+          <h3 class="dialysis-nav-title">シャント感染と予防</h3>
+          <p class="dialysis-nav-desc">シャント感染の症状・注意したいサインと、日常でできる予防ポイントを説明しています。</p>
+        </a>
         <a href="/dialysis" class="dialysis-nav-card">
           <span class="dialysis-nav-label">BASICS</span>
           <h3 class="dialysis-nav-title">透析とは？</h3>
@@ -262,11 +274,6 @@
           <span class="dialysis-nav-label">PD</span>
           <h3 class="dialysis-nav-title">腹膜透析</h3>
           <p class="dialysis-nav-desc">自宅で行う腹膜透析の特徴や、日常生活との両立について説明しています。</p>
-        </a>
-        <a href="/about" class="dialysis-nav-card">
-          <span class="dialysis-nav-label">ABOUT</span>
-          <h3 class="dialysis-nav-title">運営者情報</h3>
-          <p class="dialysis-nav-desc">このサイトを運営している臨床工学技士の紹介と、サイトの目的について説明しています。</p>
         </a>
       </div>
     </section>

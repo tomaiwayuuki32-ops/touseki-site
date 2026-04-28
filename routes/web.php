@@ -10,5 +10,6 @@ Route::get('/privacy', 'App\Http\Controllers\PageController@privacy')->name('pri
 Route::get('/disclaimer', 'App\Http\Controllers\PageController@disclaimer')->name('disclaimer');
 Route::get('/sitemap', 'App\Http\Controllers\PageController@sitemap')->name('sitemap');
 Route::get('/pd', 'App\Http\Controllers\PageController@pd')->name('pd');
+Route::get('/hd/shunt', 'App\Http\Controllers\PageController@shunt')->name('shunt');
 Route::get('/contact', 'App\Http\Controllers\PageController@contact')->name('contact');
 Route::post('/contact', 'App\Http\Controllers\PageController@contactStore')->name('contact.store');

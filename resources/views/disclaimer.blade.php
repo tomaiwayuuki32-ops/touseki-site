@@ -5,7 +5,7 @@
 @endphp
 @include('commons.header')
 
-<main class="disclaimer-page-main">
+<main class="page-main">
 
   <!-- ══════════════════════════════
        PAGE HERO
@@ -127,11 +127,6 @@
           <span class="dialysis-nav-label">ABOUT</span>
           <h3 class="dialysis-nav-title">運営者情報</h3>
           <p class="dialysis-nav-desc">このサイトを運営している内容と、サイトの目的について説明しています。</p>
-        </a>
-        <a href="/contact" class="dialysis-nav-card">
-          <span class="dialysis-nav-label">CONTACT</span>
-          <h3 class="dialysis-nav-title">お問い合わせ</h3>
-          <p class="dialysis-nav-desc">記事内容のご指摘・ご意見・不具合のご報告などはこちらからご連絡ください。</p>
         </a>
       </div>
     </section>

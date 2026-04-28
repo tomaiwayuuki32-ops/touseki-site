@@ -16,7 +16,7 @@
     --clr-ocean-deep: #0a3d62;
     --clr-ocean-mid: #1a6ea8;
     --clr-ocean-light: #3aa0d8;
-    --clr-foam: #e8f4fb;
+    --clr-foam: #f3f9fd;
     --clr-white: #ffffff;
     --clr-accent: #f0a500;
     --clr-text-main: #1c2b3a;
@@ -505,8 +505,9 @@ footer::before {
 /* ═══════════════════════════════
    MAIN LAYOUT
 ═══════════════════════════════ */
-.top-main {
+.page-main {
     flex: 1;
+    background: #ffffff;
 }
 
 /* ─── 共通セクション ─── */
@@ -822,6 +823,7 @@ footer::before {
     border: 1px solid #d0e8f5;
     border-radius: 10px;
     overflow: hidden;
+    background: var(--clr-white);
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.18s;
 }
 
@@ -876,7 +878,7 @@ footer::before {
     padding: 0 24px 20px;
     font-size: 0.87rem;
     line-height: 1.85;
-    color: var(--clr-text-sub);
+    color: #2e5f80;
     border-top: 1px solid var(--clr-foam);
     padding-top: 16px;
 }
@@ -1052,10 +1054,6 @@ footer::before {
 /* ═══════════════════════════════
    ABOUT PAGE
 ═══════════════════════════════ */
-.about-page-main {
-    flex: 1;
-    background: var(--clr-white);
-}
 
 /* ─── Page Hero ─── */
 .page-hero {
@@ -1095,12 +1093,15 @@ footer::before {
     padding: 0 32px 80px;
 }
 
-.about-page-section {
+.about-page-section,
+.article-section {
     padding: 56px 0 0;
+    scroll-margin-top: 140px;
 }
 
-.about-page-section:first-child {
-    padding-top: 48px;
+.about-page-section:first-of-type,
+.article-section:first-of-type {
+    padding-top: 32px;
 }
 
 /* ─── Greeting ─── */
@@ -1312,13 +1313,48 @@ footer::before {
     }
 }
 
+@media (max-width: 600px) {
+    .about-page-inner,
+    .shunt-content {
+        padding: 0 20px 56px;
+    }
+
+    .breadcrumb-nav {
+        margin-top: 14px;
+        margin-bottom: 0;
+        font-size: 0.85rem;
+    }
+
+    .about-page-section:first-of-type,
+    .article-section:first-of-type {
+        padding-top: 20px;
+    }
+
+    .about-page-section,
+    .article-section {
+        padding-top: 36px;
+    }
+
+    .about-page-heading {
+        margin-bottom: 12px;
+    }
+
+    .about-page-text-block {
+        gap: 12px;
+    }
+
+    .about-page-text-block p,
+    .about-page-section > p,
+    .article-section > p {
+        font-size: 0.96rem;
+        line-height: 1.9;
+        margin-bottom: 0;
+    }
+}
+
 /* ═══════════════════════════════
    DIALYSIS PAGE
 ═══════════════════════════════ */
-.dialysis-page-main {
-    flex: 1;
-    background: var(--clr-white);
-}
 
 /* ─── Lead Box ─── */
 .dialysis-lead-box {
@@ -1624,10 +1660,6 @@ footer::before {
 /* ═══════════════════════════════
    HD PAGE
 ═══════════════════════════════ */
-.hd-page-main {
-    flex: 1;
-    background: var(--clr-white);
-}
 
 /* ─── Section Lead ─── */
 .hd-section-lead {
@@ -1779,6 +1811,53 @@ footer::before {
     margin-top: 24px;
 }
 
+/* ─── Shunt Inline CTA ─── */
+.hd-shunt-cta {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--clr-foam);
+    border: 1px solid #c3dff0;
+    border-radius: 10px;
+    padding: 20px 24px;
+}
+
+.hd-shunt-cta-text {
+    flex: 1;
+}
+
+.hd-shunt-cta-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-ocean-deep);
+    margin-bottom: 6px;
+}
+
+.hd-shunt-cta-desc {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--clr-text-main);
+}
+
+.hd-shunt-cta-btn {
+    flex-shrink: 0;
+    display: inline-block;
+    background: var(--clr-ocean-mid);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.hd-shunt-cta-btn:hover {
+    background: var(--clr-ocean-deep);
+}
+
 /* ─── HD Responsive ─── */
 @media (max-width: 768px) {
     .hd-stat-grid,
@@ -1786,6 +1865,16 @@ footer::before {
     .hd-feature-grid--four,
     .hd-method-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hd-shunt-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hd-shunt-cta-btn {
+        text-align: center;
+        white-space: normal;
     }
 }
 
@@ -1823,6 +1912,13 @@ footer::before {
 
 .sitemap-item:last-child {
     border-bottom: none;
+}
+
+.sitemap-item--child {
+    padding-left: 16px;
+    border-left: 3px solid var(--clr-ocean);
+    margin-left: 8px;
+    background: #f7fbff;
 }
 
 .sitemap-item--soon {
@@ -2231,10 +2327,6 @@ footer::before {
 /* ═══════════════════════════════
    PD PAGE
 ═══════════════════════════════ */
-.pd-page-main {
-    flex: 1;
-    background: var(--clr-white);
-}
 
 /* ─── Method Cards ─── */
 .pd-method-grid {
@@ -2456,7 +2548,8 @@ footer::before {
 }
 
 .breadcrumb-nav {
-  padding: 0.75rem 0 0;
+  margin-top: 18px;
+  margin-bottom: 0;
 }
 
 .breadcrumb-list {
@@ -2494,4 +2587,178 @@ footer::before {
   .breadcrumb-wrap {
     padding: 0 20px;
   }
+}
+
+
+/* ─────────────────────────────────────────
+   SHUNT PAGE
+───────────────────────────────────────── */
+.shunt-content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+}
+
+.shunt-caution-box {
+    background: #fff8f8;
+    border: 1.5px solid #e8c0c0;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-top: 28px;
+}
+
+.shunt-caution-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #c0392b;
+    margin: 0 0 10px;
+    line-height: 1.6;
+}
+
+.shunt-caution-text {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: #444;
+    margin: 0;
+}
+
+.shunt-signs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.shunt-sign-item {
+    background: #f7fbff;
+    border: 1px solid #cce0f5;
+    border-radius: 10px;
+    padding: 20px 20px 18px;
+}
+
+.shunt-sign-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.shunt-sign-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #1a6ea8;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shunt-sign-label {
+    display: block;
+    font-size: 0.72rem;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+.shunt-sign-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin: 0;
+}
+
+.shunt-sign-desc {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+.shunt-consult-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shunt-consult-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 12px 16px;
+    background: #fff4f4;
+    border-left: 3px solid #d9534f;
+    border-radius: 0 6px 6px 0;
+    color: #333;
+}
+
+.shunt-consult-list li::before {
+    content: "!";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: #d9534f;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.shunt-checklist {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.shunt-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 13px 4px;
+    border-bottom: 1px solid #d8ecf7;
+    color: #333;
+}
+
+.shunt-checklist li:first-child {
+    border-top: 1px solid #d8ecf7;
+}
+
+.shunt-checklist li::before {
+    content: "✓";
+    flex-shrink: 0;
+    color: #1a6ea8;
+    font-weight: 700;
+    margin-top: 1px;
+}
+
+.faq-question:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(43, 150, 210, 0.18);
+}
+
+@media (max-width: 600px) {
+    .shunt-signs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shunt-caution-box {
+        padding: 20px;
+    }
 }

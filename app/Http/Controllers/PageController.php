@@ -44,6 +44,11 @@ class PageController extends Controller
         return view('pd');
     }
 
+    //シャント感染
+    public function shunt(){
+        return view('shunt');
+    }
+
     //サイトマップ
     public function sitemap(){
         return view('sitemap');

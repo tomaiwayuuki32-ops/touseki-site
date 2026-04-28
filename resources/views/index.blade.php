@@ -4,7 +4,7 @@
 @endphp
 @include('commons.header')
 
-<main class="top-main">
+<main class="page-main">
 
   <!-- ══════════════════════════════
        1. ファーストビュー

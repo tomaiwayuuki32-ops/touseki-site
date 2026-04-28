@@ -5,7 +5,7 @@
 @endphp
 @include('commons.header')
 
-<main class="contact-page-main">
+<main class="page-main">
 
   <!-- ══════════════════════════════
        PAGE HERO
