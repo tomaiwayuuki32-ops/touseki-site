@@ -1744,6 +1744,19 @@ footer::before {
     line-height: 1.5;
 }
 
+.hd-feature-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 110, 168, 0.4);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.hd-feature-link:hover {
+    color: var(--clr-ocean-mid);
+    text-decoration-color: var(--clr-ocean-mid);
+}
+
 .hd-feature-desc {
     font-size: 0.85rem;
     line-height: 1.8;
@@ -2764,3 +2777,172 @@ footer::before {
 }
 
 /* redeploy css 20260428 */
+
+/* -----------------------------------------
+   ARTERY PAGE
+----------------------------------------- */
+.artery-content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+}
+
+/* Notice Box */
+.artery-notice-box {
+    background: #f0f7ff;
+    border: 1.5px solid #aacfed;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-top: 24px;
+}
+
+.artery-notice-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--clr-ocean-deep);
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.artery-notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.artery-notice-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: #1c2b3a;
+}
+
+.artery-notice-list li::before {
+    content: "\25B8";
+    flex-shrink: 0;
+    color: var(--clr-ocean-mid);
+    font-size: 0.85rem;
+    margin-top: 1px;
+}
+
+.artery-notice-note {
+    font-size: 0.85rem;
+    color: #5a7a94;
+    line-height: 1.75;
+    margin: 0;
+    border-top: 1px solid #cde0f0;
+    padding-top: 12px;
+}
+
+/* Compare Grid */
+.artery-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.artery-compare-card {
+    background: #f7fbff;
+    border: 1.5px solid #cce0f5;
+    border-radius: 10px;
+    padding: 22px 22px 18px;
+}
+
+.artery-compare-card--highlight {
+    background: #ebf5ff;
+    border-color: var(--clr-ocean-mid);
+}
+
+.artery-compare-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--clr-ocean-deep);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cce0f5;
+}
+
+.artery-compare-card--highlight .artery-compare-label {
+    color: var(--clr-ocean-mid);
+    border-bottom-color: #aacfed;
+}
+
+.artery-compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.artery-compare-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: #333;
+}
+
+.artery-compare-list li::before {
+    content: "\2022";
+    flex-shrink: 0;
+    color: var(--clr-ocean-mid);
+    font-size: 1rem;
+    margin-top: -1px;
+}
+
+/* Point Box */
+.artery-point-box {
+    background: #fffbf0;
+    border: 1.5px solid #e8cc80;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 28px;
+    margin-bottom: 4px;
+}
+
+.artery-point-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #7a5200;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.artery-point-text {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: #444;
+    margin: 0;
+}
+
+.hd-feature-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 110, 168, 0.4);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.hd-feature-link:hover {
+    color: var(--clr-ocean-mid);
+    text-decoration-color: var(--clr-ocean-mid);
+}
+
+@media (max-width: 600px) {
+    .artery-content {
+        padding: 0 20px 56px;
+    }
+
+    .artery-compare-grid {
+        grid-template-columns: 1fr;
+    }
+}

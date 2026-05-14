@@ -23,7 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml" />
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ filemtime(public_path('css/app.css')) }}">
+  @php $cssPath = public_path('css/app.css'); @endphp
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ file_exists($cssPath) ? filemtime($cssPath) : '1' }}">
 </head>
 <body>
 
@@ -56,7 +57,6 @@
       <a href="/dialysis" @class(['active' => request()->routeIs('dialysis')])>透析とは</a>
       <a href="/hd" @class(['active' => request()->routeIs('hd')])>血液透析</a>
       <a href="/pd" @class(['active' => request()->routeIs('pd')])>腹膜透析</a>
-      <a href="#">FAQ</a>
       <a href="/about" @class(['active' => request()->routeIs('about')])>運営者情報</a>
       <a href="/contact" @class(['btn-contact', 'active' => request()->routeIs('contact')])>お問い合わせ</a>
     </nav>

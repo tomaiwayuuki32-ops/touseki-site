@@ -33,7 +33,7 @@
           <li><a href="/dialysis">透析とは</a></li>
           <li><a href="/hd">血液透析</a></li>
           <li><a href="/pd">腹膜透析</a></li>
-          <li><a href="#">FAQ</a></li>
+
         </ul>
       </div>
 

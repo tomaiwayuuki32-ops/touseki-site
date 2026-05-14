@@ -52,16 +52,16 @@
               <p class="sitemap-item-desc">シャント感染の症状・早期発見のポイントと、保湿を中心とした日常的な予防方法について説明しています。</p>
             </li>
 
+            <li class="sitemap-item sitemap-item--child">
+              <a href="/hd/artery" class="sitemap-item-link">動脈表在化</a>
+              <p class="sitemap-item-desc">動脈表在化の仕組み・内シャントとの違い・止血のポイントと、日常生活での注意点について説明しています。</p>
+            </li>
+
             <li class="sitemap-item">
               <a href="/pd" class="sitemap-item-link">腹膜透析</a>
               <p class="sitemap-item-desc">自宅で行う腹膜透析の仕組みや、CAPDとAPDの違い、血液透析との比較などを説明しています。</p>
             </li>
 
-            <li class="sitemap-item sitemap-item--soon">
-              <span class="sitemap-item-link sitemap-item-link--soon">よくある質問（FAQ）</span>
-              <span class="sitemap-badge-soon">準備中</span>
-              <p class="sitemap-item-desc">透析に関するよくある疑問や不安をまとめる予定です。</p>
-            </li>
 
           </ul>
         </div>

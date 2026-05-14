@@ -82,7 +82,7 @@
           <p class="hd-feature-desc">自分の血管だけで作ることが難しいときに、人工の血管を使って作る方法です。</p>
         </div>
         <div class="hd-feature-card">
-          <h3 class="hd-feature-title">動脈表在化</h3>
+          <h3 class="hd-feature-title"><a href="/hd/artery" class="hd-feature-link">動脈表在化</a></h3>
           <p class="hd-feature-desc">動脈を皮膚の近くに移して、穿刺しやすくする方法です。ほかの方法が難しい場合に選ばれることがあります。</p>
         </div>
         <div class="hd-feature-card">
@@ -132,9 +132,6 @@
           <p class="hd-method-note">※対応できる施設や条件があります</p>
         </div>
 
-      </div>
-      <div class="dialysis-lead-box hd-method-transition">
-        <p class="dialysis-lead-box-text">このページでは、もっとも一般的な通院血液透析を中心に、治療の頻度や日常生活について説明します。</p>
       </div>
     </section>
 

@@ -49,6 +49,11 @@ class PageController extends Controller
         return view('shunt');
     }
 
+    //動脈表在化
+    public function artery(){
+        return view('artery');
+    }
+
     //サイトマップ
     public function sitemap(){
         return view('sitemap');
@@ -81,14 +86,16 @@ class PageController extends Controller
 
         // ── 3. バリデーション ──────────────────────────────────
         $request->validate([
+            'name'    => 'nullable|string|max:100',
             'email'   => 'required|email|max:255',
-            'subject' => 'required|string',
+            'subject' => 'required|string|max:50|in:記事内容について,誤記・修正依頼,サイト不具合,ご意見・ご感想,取材・掲載依頼,その他',
             'message' => 'required|string|max:3000',
             'privacy' => 'accepted',
         ], [
             'email.required'   => 'メールアドレスを入力してください。',
             'email.email'      => '正しいメールアドレスの形式で入力してください。',
             'subject.required' => '件名を選択してください。',
+            'subject.in'       => '件名の値が不正です。',
             'message.required' => 'お問い合わせ内容を入力してください。',
             'message.max'      => 'お問い合わせ内容は3000文字以内で入力してください。',
             'privacy.accepted' => 'プライバシーポリシーへの同意が必要です。',
